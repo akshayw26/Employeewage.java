@@ -4,19 +4,31 @@ package javasample1;
 public class Hello {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employeewage");
-                int IS_PRESENT=1;
-		int WagePerHours=20;
-		int WorkingHours=8;
 		
-		double empcheck=Math.floor(Math.random()*10)%2;
-		int empwage=WagePerHours*WorkingHours;
-		if(empcheck==IS_PRESENT) {
+		int IS_FULL_TIME=1;
+		int IS_PART_TIME=2;
+		int WagePerHours=20;
+		//Variables
+		int empHrs=0;
+		int empwage=0;
+		
+		double empcheck=Math.floor(Math.random()*10)%3;
+	
+		if(empcheck==IS_FULL_TIME) {
+			empHrs=8;
+			System.out.println("Employee is Present as Fulltime");
+		}else if(empcheck==IS_PART_TIME)	{
 			
-			System.out.println("Employee is Present");
-			System.out.println("Employe wage = " +empwage);
+			empHrs=4;
+			System.out.println("Employee is Present as Parttime");
 		}else {
-			System.out.println("Employee is absent"); 
-          }
+			System.out.println("Employee is absent");
+	
+		}
+		
+		empwage=empHrs*WagePerHours;
+		System.out.println("Employe wage = " +empwage);
+	 }
+  }
 
-     }
-}
+
