@@ -1,7 +1,7 @@
 package javasample1;
 
 
-public class Hello {
+public class EmployeeWage {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employeewage");
                 int IS_PRESENT=1;
